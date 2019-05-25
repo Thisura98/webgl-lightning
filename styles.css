@@ -5,4 +5,18 @@
 #content{
     text-align: center;
     height: 100%;
+    z-index: 50;
+}
+
+#glCanvas{
+    display: inline;
+    background-color: red;
+}
+
+#messageContainer{
+    position: absolute;
+}
+
+#message{
+    z-index: 101;
 }
