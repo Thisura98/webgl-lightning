@@ -22,3 +22,10 @@
     // Only this pattern will yield 
     // the expected result.
     ```
+10. Varable Qualifiers.
+    - `attribute`: Global variables that may change per vertex, that are passed from the OpenGL application to vertex shaders. This qualifier __can only be used in vertex shaders__. Note, this is why we only have `gl.vertexAttribPointer` but not `gl.fragmentAttribPointer`. For the shader this is a read-only variable.
+    - `uniform`: Global variables that may change per primitive [...], that are passed from the OpenGL application to the shaders. This qualifier can be used in both vertex and fragment shaders. For the shaders this is a read-only variable.
+    - `varying`: Used for interpolated data between a vertex shader and a fragment shader. Available for writing in the vertex shader, and read-only in a fragment shader.  
+11. `gl.vertexAttribPointer()` - This method is called after we bind a buffer using `gl.bindBuffer(gl.ARRAY_BUFFER, ...)`, to tell GL about the data that's stored in that buffer, how to read it, and what variable location to feed them to in the vertex shader program. 
+
+The `what variable location` part is figured out using the `gl.getAttribLocation(shader, <string name of the attribute>)`, after the shader has been compiled and linked.
