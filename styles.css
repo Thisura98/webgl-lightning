@@ -6,3 +6,25 @@
     text-align: center;
     height: 100%;
 }
+
+div.debug-data{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+div.debug-data > span{
+    background-color: transparent;
+    color: ghostwhite;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    line-height: 10px;
+    padding: 2px;
+}
+
+div#graphics-container, div#graphics-container *{
+    padding: 0;
+    margin: 0;
+}
