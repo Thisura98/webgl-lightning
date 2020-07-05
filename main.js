@@ -152,6 +152,8 @@ function createLightningPath(){
         pathRaw.push(y);
     }
 
+    pathRaw.push(0.0, 1.0);
+
     /*
     const pathRaw = [
         0.0, 0.0,
